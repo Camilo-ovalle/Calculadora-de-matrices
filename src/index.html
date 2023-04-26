@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/matrizes.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Calculadora</title>
+    
+</head>
+<body>
+    <section>
+        <header>
+            <nav>
+                <img src="./assets/matrix logo.png">
+                <h2>Calculadora de matrices</h2>
+            </nav>
+        </header>
+    </section>        
+    <section id="main-container">
+
+        <span class="lateral-menu">
+            <div>
+                <button onclick="Asignar_dimension()">Asignar dimension</button>
+            </div>
+            <div>
+                <button onclick="crear_matriz_1()">Crear matriz 1</button>
+            </div>
+            <div>
+                <button onclick="crear_matriz_2()">Crear matriz 2</button>
+            </div>
+            <div>
+                <button onclick="borrar_matriz()">Borrar matriz</button>
+            </div>
+            <div>
+                <button onclick="">Calcular valores</button>
+            </div>
+        </span>
+            <span style="width: 50px;"></span>    
+        <span>
+            <div id="container1" class="grid"></div> 
+            <nav></nav>
+            <div id="container2" class="grid"></div> 
+        </span>
+            <span style="width: 50px;"></span>
+
+        <span id="table" class="lateral-menu-right">
+            <div>
+                Calculos a realizar
+            </div>
+        </span>
+    </section>
+    <section>
+        <footer>
+        </footer>
+    </section>
+    <script src="matrices.js"></script>
+</body>
+</html>

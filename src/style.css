@@ -1,0 +1,103 @@
+body{
+    background-image: radial-gradient(circle at 11% 32%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 5%,transparent 5%, transparent 95%),radial-gradient(circle at 89% 30%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 5%,transparent 5%, transparent 95%),radial-gradient(circle at 76% 90%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 83% 14%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 62% 81%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 34% 3%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 19% 1%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 48% 14%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 54% 23%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 10% 37%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),linear-gradient(90deg, rgb(54, 234, 239),rgb(107, 10, 201));
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+header nav img{
+    width: 40px;
+    height: 40px;
+}
+
+h2{
+    margin: 0px 10px;
+    font-size: x-large;
+    font-family: cursive;
+}
+#main-container{
+    display: flex;
+    width: 100%;
+}
+
+.lateral-menu{
+    display: flex;
+    width: 115px;
+    height: max-content;
+    flex-direction: column;
+    background-color: #ffffff14;
+    border-radius: 10px;
+}
+
+.lateral-menu div{
+    width: fit-content;
+    height: max-content;
+    padding: 8px 0px;
+}
+
+.lateral-menu div button{
+    width: 101px;
+    height: 40px;
+    background: none;
+    border: none;
+}
+
+.lateral-menu div button:hover{
+    transition: 300ms;
+    transform: scale(1.1);
+    width: 100px;
+    height: 40px;
+    background: rgba(83, 218, 220, 0.408);
+    border: 0.5px solid rgba(255, 255, 255, 0.204);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid{
+    display: grid;
+}
+
+span .grid div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: x-large;
+}
+
+span nav{
+    padding: 10px;
+}
+
+.lateral-menu-right{
+    display: flex;
+    width: 115px;
+    height: max-content;
+    flex-direction: column;
+    background-color: #ffffff14;
+    border-radius: 10px;
+    display: none;
+}
+
+.lateral-menu-right div{
+    width: fit-content;
+    height: max-content;
+    padding: 8px 0px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
