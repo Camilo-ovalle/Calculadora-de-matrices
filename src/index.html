@@ -10,48 +10,71 @@
     <title>Calculadora</title>
     
 </head>
-<body>
+<body id="body">
     <section>
         <header>
             <nav>
-                <img src="./assets/matrix logo.png">
-                <h2>Calculadora de matrices</h2>
+                <div class="title">
+                    <img src="./assets/matrix logo.png">
+                    <h2>Calculadora de matrices</h2>
+                </div>
+
+                <div class="lateral-menu">
+                    <div>
+                        <button onclick="Asignar_dimension()">Asignar dimension</button>
+                    </div>
+                    <div>
+                        <button onclick="crear_matriz_1()">Crear matriz 1</button>
+                    </div>
+                    <div>
+                        <button onclick="crear_matriz_2()">Crear matriz 2</button>
+                    </div>
+                    <div>
+                        <button onclick="calcular_matrices()">Calcular valores</button>
+                    </div>
+                    <div>
+                        <button onclick="borrar_matriz()">Borrar matrices</button>
+                    </div>
+                </div>
             </nav>
         </header>
     </section>        
     <section id="main-container">
 
-        <span class="lateral-menu">
-            <div>
-                <button onclick="Asignar_dimension()">Asignar dimension</button>
-            </div>
-            <div>
-                <button onclick="crear_matriz_1()">Crear matriz 1</button>
-            </div>
-            <div>
-                <button onclick="crear_matriz_2()">Crear matriz 2</button>
-            </div>
-            <div>
-                <button onclick="borrar_matriz()">Borrar matriz</button>
-            </div>
-            <div>
-                <button onclick="">Calcular valores</button>
-            </div>
-        </span>
-            <span style="width: 50px;"></span>    
         <span>
             <div id="container1" class="grid"></div> 
             <nav></nav>
             <div id="container2" class="grid"></div> 
         </span>
             <span style="width: 50px;"></span>
-
-        <span id="table" class="lateral-menu-right">
-            <div>
-                Calculos a realizar
-            </div>
-        </span>
+        
     </section>
+
+    <div id="separador"></div>
+
+    <section id="questions-answers-1">
+        <div id="suma">
+            
+        </div>
+        <nav></nav>
+        <div id="resta">
+
+        </div>
+        <nav></nav>
+        <div id="multiplicacion">
+
+        </div>
+    </section>
+
+    <section id="questions-answers-2">
+        <div id="determinante">
+
+        </div>
+        <div id="inversa">
+            
+        </div>
+    </section>
+        
     <section>
         <footer>
         </footer>

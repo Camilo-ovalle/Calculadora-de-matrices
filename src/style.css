@@ -1,55 +1,69 @@
 body{
     background-image: radial-gradient(circle at 11% 32%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 5%,transparent 5%, transparent 95%),radial-gradient(circle at 89% 30%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 5%,transparent 5%, transparent 95%),radial-gradient(circle at 76% 90%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 83% 14%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 62% 81%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 34% 3%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 19% 1%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 48% 14%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 54% 23%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 10% 37%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),linear-gradient(90deg, rgb(54, 234, 239),rgb(107, 10, 201));
+    width: auto;
+    height: 100vh;
 }
 
 header nav{
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    margin-bottom: 8px;
+    background-color: #ffffff14;
+    font-size: x-large;
+    border-radius: 15px;
 }
 
 header nav img{
-    width: 40px;
-    height: 40px;
+    padding-left: 5px;
+    width: 60px;
+    height: 60px;
 }
 
 h2{
     margin: 0px 10px;
-    font-size: x-large;
     font-family: cursive;
 }
 #main-container{
+    padding-top: 50px;
     display: flex;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
 
-.lateral-menu{
+header nav .lateral-menu{
     display: flex;
-    width: 115px;
+    width: auto;
     height: max-content;
-    flex-direction: column;
-    background-color: #ffffff14;
+    flex-direction: row;
     border-radius: 10px;
+    justify-content: flex-end;
 }
 
-.lateral-menu div{
+.title{
+    display: flex;
+    align-items: center;
+}
+
+header nav .lateral-menu div{
     width: fit-content;
     height: max-content;
-    padding: 8px 0px;
+    padding: 8px 10px;
 }
 
-.lateral-menu div button{
-    width: 101px;
+header nav .lateral-menu div button{
+    width: auto;
     height: 40px;
     background: none;
     border: none;
+    font-family: cursive;
+    font-size: medium;
 }
 
 .lateral-menu div button:hover{
     transition: 300ms;
     transform: scale(1.1);
-    width: 100px;
+    width: auto;
     height: 40px;
     background: rgba(83, 218, 220, 0.408);
     border: 0.5px solid rgba(255, 255, 255, 0.204);
@@ -73,28 +87,66 @@ span .grid div{
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 span nav{
     padding: 10px;
 }
 
-.lateral-menu-right{
+#questions-answers-1{
     display: flex;
-    width: 115px;
-    height: max-content;
-    flex-direction: column;
-    background-color: #ffffff14;
-    border-radius: 10px;
-    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.lateral-menu-right div{
-    width: fit-content;
-    height: max-content;
-    padding: 8px 0px;
+#questions-answers-1 nav{
+    padding: 10px;
 }
+
+#questions-answers-1 #suma {
+    display: grid;
+}
+
+#questions-answers-1 #suma div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: xx-large;
+}
+
+#questions-answers-1 #resta {
+    display: grid;
+}
+
+#questions-answers-1 #resta div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: xx-large;
+}
+
+#questions-answers-1 #multiplicacion {
+    display: grid;
+}
+
+#questions-answers-1 #multiplicacion div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: xx-large;
+}
+
+
+#questions-answers-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 footer{
     display: flex;
