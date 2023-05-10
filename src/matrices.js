@@ -243,6 +243,8 @@ const crear_matriz_2 = () =>{
 
 const borrar_matriz = () =>{
 
+    body.style.height = '100vh'
+
     matriz_2D = [[], []]
     matriz_3D = [[], [], []]
     matriz_2D_2 = [[], []]
