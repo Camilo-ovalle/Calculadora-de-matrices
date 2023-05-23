@@ -20,6 +20,7 @@ const Asignar_dimension =()=>{
     dimension =  parseInt(prompt("Ingrese la dimension de su matriz"))
 }
 
+//funcion para crear la matriz
 const crear_matriz_1 = () =>{
 
 
@@ -299,6 +300,9 @@ const borrar_matriz = () =>{
     let multi8 = document.getElementById('multi8')
     let multi9 = document.getElementById('multi9')
 
+    let det = document.getElementById('determinante1')
+    let det2 = document.getElementById('determinante2')
+
     switch(dimension){
         case 2:
             contenedor1.removeChild(cell1_3D)
@@ -324,6 +328,9 @@ const borrar_matriz = () =>{
             multiplicacion.removeChild(multi2)
             multiplicacion.removeChild(multi3)
             multiplicacion.removeChild(multi4)
+
+            determinante.removeChild(det)
+            determinante.removeChild(det2)
 
 
         break
@@ -377,18 +384,35 @@ const borrar_matriz = () =>{
             multiplicacion.removeChild(multi8)
             multiplicacion.removeChild(multi9)
 
+            determinante.removeChild(det)
+            determinante.removeChild(det2)
+
         break
             
     }
 
 }
 
+//Funcion para calcular las matrices
 const calcular_matrices = () =>{
 
     body.style.height = 'auto'
     
-    let separador = document.getElementById('separador')
+    let separador = document.getElementById('separador1')
     separador.style.padding = "20px"
+    separador.innerHTML = "Resultado de la suma, resta y multiplicación de matrices"
+    separador.style.display = 'flex'
+    separador.style.justifyContent = 'center'
+    separador.style.alignItems = 'center'
+    separador.style.fontSize = 'xx-large'
+
+    let separador2 = document.getElementById('separador2')
+    separador2.style.padding = "20px"
+    separador2.innerHTML = "Resultado de la determinante de las matrizes"
+    separador2.style.display = 'flex'
+    separador2.style.justifyContent = 'center'
+    separador2.style.alignItems = 'center'
+    separador2.style.fontSize = 'xx-large'
 
     switch(dimension){
         case 2:
@@ -401,6 +425,12 @@ const calcular_matrices = () =>{
 
             multiplicacion.style.gridTemplateColumns = "repeat(2, 120px)"
             multiplicacion.style.gridAutoRows =  "minmax(120px, 120px)"
+            
+            determinante.style.display = 'flex'
+            determinante.style.flexDirection = 'row'
+            determinante.style.justifyContent = 'center'
+            determinante.style.alignItems = 'center'
+            
 
             let celda1_2 = document.createElement('div')
             let celda2_2 = document.createElement('div')
@@ -417,6 +447,9 @@ const calcular_matrices = () =>{
             let celda11_2 = document.createElement('div')  
             let celda12_2 = document.createElement('div')
 
+            let celda13_2 = document.createElement('div')
+            let celda14_2 = document.createElement('div')
+
             celda1_2.id = 'suma1'
             celda2_2.id = 'suma2'
             celda3_2.id = 'suma3'
@@ -432,6 +465,9 @@ const calcular_matrices = () =>{
             celda11_2.id = 'multi3'
             celda12_2.id = 'multi4'
 
+            celda13_2.id = 'determinante1'
+            celda14_2.id = 'determinante2'
+
             suma.appendChild(celda1_2)
             suma.appendChild(celda2_2)
             suma.appendChild(celda3_2)
@@ -446,6 +482,9 @@ const calcular_matrices = () =>{
             multiplicacion.appendChild(celda10_2)
             multiplicacion.appendChild(celda11_2)
             multiplicacion.appendChild(celda12_2)
+
+            determinante.appendChild(celda13_2)
+            determinante.appendChild(celda14_2)
 
             let valor1_matriz_1_2D = document.getElementById('cell1')
             let valor2_matriz_1_2D = document.getElementById('cell2')
@@ -475,6 +514,10 @@ const calcular_matrices = () =>{
 
             let A12 = (Number(valor3_matriz_1_2D.innerHTML) * Number(valor2_matriz_2_2D.innerHTML)) + (Number(valor4_matriz_1_2D.innerHTML) * Number(valor4_matriz_2_2D.innerHTML));
 
+            let A13 = (Number(valor1_matriz_1_2D.innerHTML) * Number(valor4_matriz_1_2D.innerHTML)) - (Number(valor2_matriz_1_2D.innerHTML) * Number(valor3_matriz_1_2D.innerHTML));
+
+            let A14 = (Number(valor1_matriz_2_2D.innerHTML) * Number(valor4_matriz_2_2D.innerHTML)) - (Number(valor2_matriz_2_2D.innerHTML) * Number(valor3_matriz_2_2D.innerHTML));
+
             document.getElementById('suma1').innerHTML = A1
             document.getElementById('suma2').innerHTML = A2
             document.getElementById('suma3').innerHTML = A3
@@ -490,6 +533,9 @@ const calcular_matrices = () =>{
             document.getElementById('multi3').innerHTML = A11
             document.getElementById('multi4').innerHTML = A12
 
+            document.getElementById('determinante1').innerHTML = A13
+            document.getElementById('determinante2').innerHTML = A14
+
             break;
 
         case 3:
@@ -502,6 +548,11 @@ const calcular_matrices = () =>{
 
             multiplicacion.style.gridTemplateColumns = "repeat(3, 120px)"
             multiplicacion.style.gridAutoRows =  "minmax(120px, 120px)"
+
+            determinante.style.display = 'flex'
+            determinante.style.flexDirection = 'row'
+            determinante.style.justifyContent = 'center'
+            determinante.style.alignItems = 'center'
 
             let celda1_3 = document.createElement('div')
             let celda2_3 = document.createElement('div')
@@ -533,6 +584,9 @@ const calcular_matrices = () =>{
             let celda26_3 = document.createElement('div')
             let celda27_3 = document.createElement('div')
 
+            let celda28_3 = document.createElement('div')
+            let celda29_3 = document.createElement('div')
+
             celda1_3.id = 'suma1'
             celda2_3.id = 'suma2'
             celda3_3.id = 'suma3'
@@ -563,6 +617,10 @@ const calcular_matrices = () =>{
             celda26_3.id = 'multi8'
             celda27_3.id = 'multi9'
 
+            celda28_3.id = 'determinante1'
+            celda29_3.id = 'determinante2'
+
+
             suma.appendChild(celda1_3)
             suma.appendChild(celda2_3)
             suma.appendChild(celda3_3)
@@ -592,6 +650,9 @@ const calcular_matrices = () =>{
             multiplicacion.appendChild(celda25_3)
             multiplicacion.appendChild(celda26_3)
             multiplicacion.appendChild(celda27_3)
+
+            determinante.appendChild(celda28_3)
+            determinante.appendChild(celda29_3)
 
             let valor1_matriz1_3D = document.getElementById('cell1')
             let valor2_matriz1_3D = document.getElementById('cell2')
@@ -651,6 +712,10 @@ const calcular_matrices = () =>{
 
             let D9 = (Number(valor7_matriz1_3D.innerHTML) * Number(valor3_matriz_2_3D.innerHTML)) + (Number(valor8_matriz1_3D.innerHTML) * Number(valor6_matriz_2_3D.innerHTML)) + (Number(valor9_matriz1_3D.innerHTML) * Number(valor9_matriz_2_3D.innerHTML))
 
+            let E1 = (Number(valor1_matriz1_3D.innerHTML) * Number(valor5_matriz1_3D.innerHTML) * Number(valor9_matriz1_3D.innerHTML)) + (Number(valor2_matriz1_3D.innerHTML) * Number(valor6_matriz1_3D.innerHTML) * Number(valor7_matriz1_3D.innerHTML)) + (Number(valor3_matriz1_3D.innerHTML) * Number(valor4_matriz1_3D.innerHTML) * Number(valor8_matriz1_3D.innerHTML)) - Number(valor7_matriz1_3D.innerHTML) * Number(valor5_matriz1_3D.innerHTML) * Number(valor3_matriz1_3D.innerHTML) - Number(valor8_matriz1_3D.innerHTML) * Number(valor6_matriz1_3D.innerHTML) * Number(valor1_matriz1_3D.innerHTML) - Number(valor9_matriz1_3D.innerHTML) * Number(valor4_matriz1_3D.innerHTML) * Number(valor2_matriz1_3D.innerHTML)
+
+            let E2 = (Number(valor1_matriz_2_3D.innerHTML) * Number(valor5_matriz_2_3D.innerHTML) * Number(valor9_matriz_2_3D.innerHTML)) + (Number(valor2_matriz_2_3D.innerHTML) * Number(valor6_matriz_2_3D.innerHTML) * Number(valor7_matriz_2_3D.innerHTML)) + (Number(valor3_matriz_2_3D.innerHTML) * Number(valor4_matriz_2_3D.innerHTML) * Number(valor8_matriz_2_3D.innerHTML)) - Number(valor7_matriz_2_3D.innerHTML) * Number(valor5_matriz_2_3D.innerHTML) * Number(valor3_matriz_2_3D.innerHTML) - Number(valor8_matriz_2_3D.innerHTML) * Number(valor6_matriz_2_3D.innerHTML) * Number(valor1_matriz_2_3D.innerHTML) - Number(valor9_matriz_2_3D.innerHTML) * Number(valor4_matriz_2_3D.innerHTML) * Number(valor2_matriz_2_3D.innerHTML)
+
             document.getElementById('suma1').innerHTML = B1
             document.getElementById('suma2').innerHTML = B2
             document.getElementById('suma3').innerHTML = B3
@@ -680,6 +745,9 @@ const calcular_matrices = () =>{
             document.getElementById('multi7').innerHTML = D7
             document.getElementById('multi8').innerHTML = D8
             document.getElementById('multi9').innerHTML = D9
+
+            document.getElementById('determinante1').innerHTML = E1
+            document.getElementById('determinante2').innerHTML = E2
             
             break;
     }

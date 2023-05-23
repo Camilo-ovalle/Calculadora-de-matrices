@@ -147,6 +147,28 @@ span nav{
     align-items: center;
 }
 
+#determinante1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 120px;
+    width: 120px;
+    font-size: xx-large;
+    margin-right: 10px;
+}
+
+#determinante2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 120px;
+    width: 120px;
+    font-size: xx-large;
+    margin-left: 10px;
+}
+
 
 footer{
     display: flex;
