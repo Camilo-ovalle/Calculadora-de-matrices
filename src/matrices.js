@@ -246,6 +246,22 @@ const borrar_matriz = () =>{
 
     body.style.height = '100vh'
 
+    let separador = document.getElementById('separador1')
+    separador.style.padding = "20px"
+    separador.innerHTML = ""
+    separador.style.display = 'flex'
+    separador.style.justifyContent = 'center'
+    separador.style.alignItems = 'center'
+    separador.style.fontSize = 'xx-large'
+
+    let separador2 = document.getElementById('separador2')
+    separador2.style.padding = "20px"
+    separador2.innerHTML = ""
+    separador2.style.display = 'flex'
+    separador2.style.justifyContent = 'center'
+    separador2.style.alignItems = 'center'
+    separador2.style.fontSize = 'xx-large'
+
     matriz_2D = [[], []]
     matriz_3D = [[], [], []]
     matriz_2D_2 = [[], []]
